@@ -217,6 +217,7 @@
       document.getElementById('category').value = p.category;
       document.getElementById('price').value = p.price;
       document.getElementById('stock').value = p.stock || 0;
+      
     }
 
     async function deleteProduct(id) {
@@ -235,7 +236,8 @@
       await fetch(url, { method, body: formData });
       document.getElementById('productForm').reset();
       loadProducts();
-    });
+  
+});
 
     loadProducts();
   </script>
